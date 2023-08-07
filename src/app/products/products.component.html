@@ -1,0 +1,97 @@
+<section class="container2">
+  <div class="searchDiv">
+    <h1 class="title">our products</h1>
+    <div>
+      <input type="text" [(ngModel)]="searchName" placeholder="Enter product's name"> <br>
+      <!-- <button (click)="SearchName(searchName)" class="search">Search</button> -->
+      <input type="text" [(ngModel)]="searchModel" placeholder="Enter product's model"><br>
+      <button mat-raised-button color="primary" (click)="search()" class="search">Search</button>
+      <button mat-raised-button color="primary" (click)="Reset()" class="reset">reset</button>
+    </div>
+  </div>  
+
+    <section class="products2">
+        <div *ngFor="let product of FilterdProducts" class="product2">
+          <div class="imgBx">
+            <h1 class="name">{{product.name}}</h1>
+            <img [src]="product.imgSrc">
+          </div>
+          <div class="content2">
+             <h2>model: {{product.model}}</h2>
+             <p>{{product.description}}</p>
+             <h3>price: {{product.price}} $</h3>
+             <h3 [ngClass]="product.quantity<=5 && product.quantity>0 ?'red' : 'hidden' ">{{product.quantity}} items Left</h3>
+             <h3 [ngClass]="product.quantity==0 ?'red' : 'hidden' ">Out Of Stock</h3>
+             <button mat-raised-button color="primary" (click)="AddToCart(product)" [disabled]="product.quantity === 0">Buy</button>
+          </div>
+        </div>
+    </section>
+
+                          <!--======================== driven form =========================-->
+  <!-- <section class="addProduct">
+    <h1 class="title">Add new Product</h1>
+    <form #productForm="ngForm">
+      
+      <label for="id">id: </label>
+      <input type="number" required [(ngModel)]="newProduct.id" placeholder="Enter Product's ID" name="id"><br>
+      <label for="name">Name: </label>
+      <input type="text"   required [(ngModel)]="newProduct.name" placeholder="Enter Product's Name" name="name" ><br>
+      <label for="imgsrc">imgSrc: </label>
+      <input type="text"   required [(ngModel)]="newProduct.imgSrc" placeholder="Enter Product's imgsrc" name="imgSrc"><br>
+      <label for="model">Model: </label>
+      <input type="text"   required [(ngModel)]="newProduct.model" placeholder="Enter Product's model" name="model"><br>
+      <label for="price">Price: </label>
+      <input type="number" required [(ngModel)]="newProduct.price" placeholder="Enter Product's price" name="price"><br>
+      <label for="description">Description: </label>
+      <input type="text"   required [(ngModel)]="newProduct.description" placeholder="Enter Product's description" name="description"><br>
+      <label for="quantity">quantity: </label>
+      <input type="number" required [(ngModel)]="newProduct.quantity" placeholder="Enter Product's quantity" name="quantity"><br>
+      <button (click)="submit(newProduct)">add new product</button>
+    </form>
+  </section> -->
+
+
+                        <!--======================= reactive form ==================-->
+  
+  <section class="addProduct">
+    <h1 class="title">Add new Product</h1>
+    <form [formGroup]="addProductForm" >
+      <div class="addForm">
+        <div>
+          <label for="id">id: </label>
+          <input type="number" required  placeholder="Enter Product's ID" formControlName="Id">
+        </div>
+        
+        <div>
+          <label for="name">Name: </label>
+          <input type="text"   required  placeholder="Enter Product's Name" formControlName="Name" >
+        </div>
+        
+        <div>
+          <label for="imgsrc">imgSrc: </label>
+          <input type="text"   required  placeholder="Enter Product's imgsrc" formControlName="ImgSrc">
+        </div>
+        <div>
+          <label for="model">Model: </label>
+          <input type="text"   required  placeholder="Enter Product's model" formControlName="Model">
+        </div>
+        <div>
+          <label for="price">Price: </label>
+          <input type="number" required  placeholder="Enter Product's price" formControlName="Price">
+        </div>
+        <div>
+          <label for="description">Description: </label>
+          <input type="text"   required  placeholder="Enter Product's description" formControlName="Description">
+        </div>
+        <div>
+          <label for="quantity">quantity: </label>
+          <input type="number" required  placeholder="Enter Product's quantity" formControlName="Quantity">
+        </div>
+      </div>
+        <button (click)="submit()">add new product</button>
+      
+      
+    </form>
+  </section>
+</section>
+

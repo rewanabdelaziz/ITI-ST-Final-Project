@@ -1,0 +1,17 @@
+<section class="container2">
+    <h1 class="title">Best seller</h1>
+    <p>This Component use Fake API</p>
+    <section class="products2">
+        <div *ngFor="let product of APIproducts" class="product2">
+          <div class="imgBx">     
+            <img [src]="product.image">
+          </div>
+          <div class="content2">
+             <h1 class="name">{{product.title}}</h1><br>
+             <p>{{product.description}}</p>
+             <h3>price: {{product.price}} $</h3>
+             <button mat-raised-button color="primary" (click)="AddToCart(product)">Buy</button>
+          </div>
+        </div>
+    </section>
+</section>

@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+}
+.contact{
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+    background:linear-gradient(rgba(0,0,0,.9),rgba(68, 67, 67, 0.7)), url(src/assets/images/contact.jpeg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+}
+.contact .heading{
+    color:#fff;
+    font-size: 4rem;
+    margin: 50px;
+    line-height: 1.5;
+}
+
+.contact .title{
+    color:yellowgreen;
+}
+
+.contact form{
+    width:70%;
+    margin:2rem auto;
+}
+
+.contact form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form input{
+    border-radius: 10px;
+}
+
+.contact form .inputBox input, .contact form textarea{
+    height:1.5rem;
+    width:50%;
+    padding:10px 1rem;
+    margin:1rem 0;
+    font-size: 2rem;
+    border:.2rem solid #eee;
+    background:none;
+    text-transform: none;
+    color:#fff;
+}
+
+.contact form .inputBox input::placeholder, .contact form textarea::placeholder{
+    color:#bebcbc;
+}
+
+.contact form .inputBox input:focus, .contact form textarea:focus{
+    border-color:blue;
+}
+
+.contact form textarea{
+    height:20rem;
+    width:100%;
+    padding:1rem;
+    resize: none;
+}
+.contact form .btn{
+    
+    background-color:yellowgreen;
+    color:#090909;
+    border:rgb(39, 58, 0) solid 3px;
+    border-radius: 15px;
+    padding: 10px 25px;
+}
+.contact form .btn:hover{
+    background:#fff;
+}
+@media screen and (max-width: 768px){
+    .contact form .inputBox input{
+        height:1.5rem;
+        width:100%;
+        display: block;
+        margin: 30px;
+    }
+    form{
+        margin: 2rem;
+
+    }
+    .contact .heading{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 380px){
+    .contact form .inputBox input{
+        margin-left: 0px;
+ 
+    }
+    form{
+        margin: 0.5rem;
+        padding: 0px;
+
+    }
+    .contact{
+        padding: 5px;
+    }
+}
+

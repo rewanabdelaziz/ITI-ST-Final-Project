@@ -1,0 +1,38 @@
+<!-- start nav -->
+<nav>
+    <div class="logo">
+      <a routerLink="/**">
+        <i class="fas fa-headphones"></i>
+        shop<span>ify</span>
+      </a>
+    </div>
+    <div class="menu-icon" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="pages" [ngClass]="{ 'active': isMenuOpen }">
+      <a routerLink="/products">Products</a>
+      <a routerLink="/aboutus">About Us</a>
+      <a routerLink="/contactus">Contact US</a>
+      <a routerLink="/bestseller">Best Seller</a>
+      <a routerLink="/cart">Your Cart</a>
+    </div>
+</nav>
+<!-- <nav>
+    <div class="logo">
+        <a routerLink="/**"><i class="fas fa-headphones"></i>
+        shop<span>ify</span></a>
+    </div>
+    <div class="pages">
+       <a routerLink="/products">Products</a>
+       <a routerLink="/aboutus">About Us</a>
+       <a routerLink="/contactus">Contact US</a>
+       <a routerLink="/bestseller">Best Seller</a>
+       <a routerLink="/cart">Your Cart</a>
+    </div>
+</nav>  -->
+
+
+
+<!-- end nav -->

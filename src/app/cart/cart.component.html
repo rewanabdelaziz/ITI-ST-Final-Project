@@ -1,0 +1,29 @@
+<section class="cart">
+  <div class="txt">
+    <h1 class="title">Your Cart</h1>
+    <h2 id="cost"> Total Cost:<span class="cost"> {{TotalCost}} $</span></h2>
+  </div>
+  <div class="allProducts">
+
+    <div  *ngFor="let product of cartItems1" class="product2">
+        <div class="imgBx">
+                 <img [src]="product.imgSrc">
+        </div>
+        <div class="content2">
+                 <h3>price: {{product.price}} $</h3>
+                <button (click)="DeleteProduct(product)" class="delete">Delete</button>
+      </div>     
+    </div>
+
+    <div  *ngFor="let product of cartItems2" class="product2">
+        <div class="imgBx ">
+                <img [src]="product.image">
+        </div>
+        <div class="content2">
+                 <h3>price: {{product.price}} $</h3>
+                <button (click)="DeleteProductFromFake(product)" class="delete">Delete</button>
+      </div>     
+    </div>
+
+  </div>
+</section>

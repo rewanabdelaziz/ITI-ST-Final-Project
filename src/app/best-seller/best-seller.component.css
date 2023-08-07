@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container2{
+    text-align: center; 
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 50px;
+}
+.container2 p{
+margin-top: 30px;
+}
+.container2 button{
+    padding: 10px 25px;
+    background-color: rgb(10, 147, 5);
+    border-radius: 10px;
+    color: white;
+}
+.products2{
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:100px 50px;
+    padding: 50px ;
+}
+.product2{
+    position:relative ;
+    display: flex;
+    justify-content:center ;
+    align-items: flex-start;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 0 15px 20px rgba(45, 63, 0, 0.4);
+}
+.product2:hover{
+    height: 1200px;
+}
+.imgBx{
+    position:absolute;
+    width: 300px;
+    height: 220px;
+    background-color:#000000 ;
+    top:30px;
+    border-radius: 12px;
+    transition: 0.5s;
+    overflow: hidden;
+    text-align: center;
+    letter-spacing: 2.5px;
+}
+.imgBx img{
+    
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    height: 100%;
+    /* object-fit: cover; */
+}
+.product2:hover .imgBx{
+    top:-100px;
+    scale: 0.75;
+    box-shadow: 0 15px 35px black;
+}
+.content2{
+    position: absolute;
+    width: 100%;
+    padding: 0 30px;
+    text-align: center;
+    top: 260px;
+    height:100px;
+    overflow: hidden;
+    transition: 0.5s;
+    font-size: 20px;
+    line-height: 1.5;
+    
+}
+.content2 p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:gray;
+    text-align: start;
+}
+.content2 h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.product2:hover .content2{
+    height: 950px;
+    top:200px;
+}
+.title{
+    font-size: 60px;
+    font-weight:700;
+    color:rgb(5, 140, 219);
+    text-shadow: 5px 5px rgb(202, 195, 195);
+}
+.name{
+    color: rgb(4, 84, 115);
+    font-size: 20px;
+}
+@media screen and (max-width: 500px){
+.imgBx{
+    position:absolute;
+    width: 150px;
+    height: 200px;
+}
+/* .product2:hover{
+    height: 1200px;
+} */
+.container2 .searchDiv input{
+    width: 50%;
+}
+.addProduct form{
+    padding-left: 2px;
+}
+.addProduct form input{
+   margin-left: 0px;
+   width: 100px;
+}
+/* .product2:hover .content2{
+    height: 1300px;
+    top:200px;
+} */
+.product2:hover .content2 p{
+    font-size:17px;
+}
+}

@@ -1,0 +1,32 @@
+<!-- contact section starts  -->
+
+   <section class="contact" id="contact">
+
+    <h1 class="heading">Contact US</h1>
+    
+    <h1 class="title">contact us for latest updates</h1>
+    
+    <form target="_self">
+    
+        <div class="inputBox">
+            <input type="text" placeholder="first name" required name="contact"  [(ngModel)]="firstName">
+        
+        </div>
+        <div class="inputBox">
+            
+            <input type="text" placeholder="last name" required name="contact"  [(ngModel)]="lastName">
+        </div>
+    
+        <div class="inputBox">
+            <input type="email" placeholder="your email" required name="contact" [(ngModel)]="email">
+        </div>
+    
+        <textarea name="" id="" cols="30" rows="10" placeholder="message" required name="contact" [(ngModel)]="message"></textarea>
+    
+        <input type="submit" value="message" class="btn" name="contact" (click)="submitForm()">
+    
+    </form>
+    
+    </section>
+    
+<!-- contact section ends -->
